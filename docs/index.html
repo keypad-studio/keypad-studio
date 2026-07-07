@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Keypad Studio — cross-platform macro keypad configurator</title>
+<meta name="description" content="Keypad Studio — remap keys, record macros, drive layers, switch per-app presets, and control RGB on MINI KeyBoard macro keypads. macOS, Windows, and Linux." />
+<link rel="icon" href="keypad-studio-logo.svg" type="image/svg+xml" />
+<style>
+  :root {
+    --bg: #f7f8fa;
+    --panel: #ffffff;
+    --border: #e4e7ec;
+    --fg: #12141a;
+    --muted: #5b6472;
+    --accent: #4285f4;
+    --accent-fg: #ffffff;
+    --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+    --radius: 14px;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0d0f14;
+      --panel: #161922;
+      --border: #262b36;
+      --fg: #eef1f6;
+      --muted: #9aa4b2;
+      --accent: #5b9bff;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+    }
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    margin: 0;
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--fg);
+    background: var(--bg);
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+
+  /* Hero */
+  header.hero { text-align: center; padding: 72px 20px 40px; }
+  .hero img.logo { width: 96px; height: 96px; filter: drop-shadow(0 6px 16px rgba(0,0,0,.28)); }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 18px 0 6px; letter-spacing: -.02em; }
+  .hero p.tagline { color: var(--muted); font-size: 1.15rem; max-width: 640px; margin: 0 auto 28px; }
+
+  .cta { display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: 1rem;
+    border: 1px solid transparent; cursor: pointer; transition: transform .04s ease, background .15s ease;
+  }
+  .btn:active { transform: translateY(1px); }
+  .btn.primary { background: var(--accent); color: var(--accent-fg); }
+  .btn.primary:hover { text-decoration: none; filter: brightness(1.05); }
+  .btn.ghost { background: transparent; color: var(--fg); border-color: var(--border); }
+  .btn.ghost:hover { text-decoration: none; background: var(--panel); }
+  .cta small { display: block; color: var(--muted); font-size: .85rem; margin-top: 4px; }
+  #detected-note { color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
+
+  /* Screenshot */
+  .shot { margin: 44px auto 0; max-width: 900px; }
+  .shot img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+
+  /* Sections */
+  section.section { padding: 56px 0; }
+  section.section h2 { font-size: 1.5rem; margin: 0 0 24px; letter-spacing: -.01em; }
+  .card {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px;
+  }
+
+  /* Download grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+  .dl {
+    display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
+  }
+  .dl .meta { display: flex; flex-direction: column; }
+  .dl .meta .os { font-weight: 600; }
+  .dl .meta .file { color: var(--muted); font-size: .8rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+  .dl a.get { white-space: nowrap; font-weight: 600; }
+
+  /* Features */
+  .features { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 18px; }
+  .feature h3 { margin: 0 0 4px; font-size: 1rem; }
+  .feature p { margin: 0; color: var(--muted); font-size: .95rem; }
+
+  /* Shared license (hidden by default) */
+  .keybox { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 6px; }
+  .keybox code {
+    flex: 1 1 260px; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border);
+    border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95rem;
+    overflow: auto; white-space: nowrap;
+  }
+  .fine { color: var(--muted); font-size: .85rem; }
+
+  footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--muted); text-align: center; font-size: .9rem; }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <img class="logo" src="keypad-studio-logo.svg" alt="Keypad Studio logo" />
+  <h1>Keypad Studio</h1>
+  <p class="tagline">A modern, cross-platform configurator for “MINI KeyBoard” macro keypads.
+    Remap keys, record macros, drive layers, switch presets per app, and light up the RGB.</p>
+
+  <div class="cta">
+    <a id="primary-download" class="btn primary" href="#download">Download</a>
+    <a class="btn ghost" href="#download">All platforms</a>
+  </div>
+  <div id="detected-note"></div>
+</header>
+
+<div class="wrap">
+  <div class="shot">
+    <img src="screenshot.png" alt="Keypad Studio main window — preset list, key grid, and preset properties" loading="lazy" />
+  </div>
+</div>
+
+<main class="wrap">
+
+  <!-- Downloads -->
+  <section id="download" class="section">
+    <h2>Download</h2>
+    <p class="fine" style="margin-top:-12px">These links always resolve to the most recent release.
+      On a Raspberry Pi, use the <strong>arm64</strong> files (64-bit Pi OS required).</p>
+    <div class="grid" id="download-grid"><!-- populated by script; static fallback below --></div>
+    <noscript>
+      <div class="grid">
+        <div class="dl"><span class="meta"><span class="os">macOS (Apple Silicon)</span></span><a class="get" href="https://github.com/keypad-studio/keypad-studio/releases/latest/download/KeypadStudio-macos-arm64.dmg">Download</a></div>
+        <div class="dl"><span class="meta"><span class="os">Windows (x64)</span></span><a class="get" href="https://github.com/keypad-studio/keypad-studio/releases/latest/download/KeypadStudio-windows-x64.exe">Download</a></div>
+        <div class="dl"><span class="meta"><span class="os">Debian / Ubuntu (x64)</span></span><a class="get" href="https://github.com/keypad-studio/keypad-studio/releases/latest/download/KeypadStudio-linux-x64.deb">Download</a></div>
+        <div class="dl"><span class="meta"><span class="os">Debian / Pi OS 64-bit (arm64)</span></span><a class="get" href="https://github.com/keypad-studio/keypad-studio/releases/latest/download/KeypadStudio-linux-arm64.deb">Download</a></div>
+        <div class="dl"><span class="meta"><span class="os">Linux AppImage (x64)</span></span><a class="get" href="https://github.com/keypad-studio/keypad-studio/releases/latest/download/KeypadStudio-linux-x64-appimage.AppImage">Download</a></div>
+        <div class="dl"><span class="meta"><span class="os">Linux AppImage (arm64)</span></span><a class="get" href="https://github.com/keypad-studio/keypad-studio/releases/latest/download/KeypadStudio-linux-arm64-appimage.AppImage">Download</a></div>
+      </div>
+    </noscript>
+    <p style="margin-top:18px">Older versions and full release notes are on the
+      <a href="https://github.com/keypad-studio/keypad-studio/releases">Releases</a> page.</p>
+  </section>
+
+  <!--
+    ===========================================================================
+    SHARED LICENSE KEY — OPTIONAL, DISABLED BY DEFAULT.
+    This section is intentionally hidden (the `hidden` attribute on the <section>).
+    To publish a shared/community key later:
+      1. Replace the text inside #license-key with the real key.
+      2. Remove the `hidden` attribute from the <section id="shared-license"> tag.
+    ===========================================================================
+  -->
+  <section id="shared-license" class="section" hidden>
+    <h2>Shared license key</h2>
+    <div class="card">
+      <p>Unlock the paid features — host actions, per-app presets, and the key library — by pasting
+        this key into <strong>Keypad Studio → Settings → License</strong>.</p>
+      <div class="keybox">
+        <code id="license-key">PASTE-SHARED-LICENSE-KEY-HERE</code>
+        <button type="button" id="copy-key" class="btn ghost">Copy</button>
+      </div>
+      <p class="fine">This shared key is optional and may be rotated or disabled at any time.</p>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <h2>What it does</h2>
+    <div class="features">
+      <div class="feature"><h3>Remap &amp; macros</h3><p>Rebind every key and rotary knob, and record multi-step macros.</p></div>
+      <div class="feature"><h3>Layers</h3><p>Multiple key layouts you can switch between on the fly.</p></div>
+      <div class="feature"><h3>Per-app presets</h3><p>The active layout follows whichever app is in focus.</p></div>
+      <div class="feature"><h3>Key library</h3><p>Build a key once, then drop it onto any slot.</p></div>
+      <div class="feature"><h3>Host actions</h3><p>Launch an app or open a URL straight from a key.</p></div>
+      <div class="feature"><h3>RGB control</h3><p>Set the backlight modes and colors your pad supports.</p></div>
+    </div>
+    <p class="fine" style="margin-top:22px">Targets the CH57x-family “MINI KeyBoard” keypads (USB vendor ID
+      <code>0x1189</code>). On Linux the app needs a small one-time setup (a <code>udev</code> rule and an
+      X11 session) — the in-app first-run checklist walks you through it.</p>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    Keypad Studio has no analytics or telemetry. Questions or hardware reports:
+    <a id="support-email" href="#" rel="nofollow">email us</a>.
+    &nbsp;·&nbsp; <a href="https://github.com/keypad-studio/keypad-studio/releases">Releases</a>
+  </div>
+</footer>
+
+<script>
+(function () {
+  var contactHost = document.getElementById('support-email');
+  if (contactHost) {
+    var contact = [
+      115, 116, 117, 100, 105, 111, 107, 101, 121, 112, 97, 100,
+      64,
+      103, 109, 97, 105, 108,
+      46,
+      99, 111, 109
+    ].map(function (code) { return String.fromCharCode(code); }).join('');
+    contactHost.addEventListener('click', function (event) {
+      event.preventDefault();
+      window.location.href = ['mai', 'lto:'].join('') + contact;
+    });
+  }
+
+  var REPO = 'keypad-studio/keypad-studio';
+  var BASE = 'https://github.com/' + REPO + '/releases/latest/download/';
+
+  // Ordered list of every published asset.
+  var ASSETS = [
+    { key: 'mac',   os: 'macOS (Apple Silicon)',           file: 'KeypadStudio-macos-arm64.dmg' },
+    { key: 'win',   os: 'Windows (x64)',                   file: 'KeypadStudio-windows-x64.exe' },
+    { key: 'deb64', os: 'Debian / Ubuntu (x64)',           file: 'KeypadStudio-linux-x64.deb' },
+    { key: 'debA',  os: 'Debian / Pi OS 64-bit (arm64)',   file: 'KeypadStudio-linux-arm64.deb' },
+    { key: 'app64', os: 'Linux AppImage (x64)',            file: 'KeypadStudio-linux-x64-appimage.AppImage' },
+    { key: 'appA',  os: 'Linux AppImage (arm64)',          file: 'KeypadStudio-linux-arm64-appimage.AppImage' }
+  ];
+
+  // Build the download grid.
+  var grid = document.getElementById('download-grid');
+  if (grid) {
+    ASSETS.forEach(function (a) {
+      var row = document.createElement('div');
+      row.className = 'dl';
+      row.innerHTML =
+        '<span class="meta"><span class="os"></span><span class="file"></span></span>' +
+        '<a class="get" rel="nofollow"></a>';
+      row.querySelector('.os').textContent = a.os;
+      row.querySelector('.file').textContent = a.file;
+      var link = row.querySelector('a.get');
+      link.href = BASE + a.file;
+      link.textContent = 'Download';
+      grid.appendChild(row);
+    });
+  }
+
+  // Detect the visitor's OS for the primary hero button. Browsers don't expose CPU arch
+  // reliably, so we default macOS -> arm64 (the only mac build) and Linux -> .deb x64.
+  function detect() {
+    var ua = navigator.userAgent || '';
+    var pf = navigator.platform || '';
+    if (/Android/.test(ua)) return null;
+    if (/Mac|iPhone|iPad|iPod/.test(ua) || /Mac/.test(pf)) return 'mac';
+    if (/Win/.test(ua) || /Win/.test(pf)) return 'win';
+    if (/Linux|X11|CrOS/.test(ua)) return 'linux';
+    return null;
+  }
+
+  var os = detect();
+  var primary = document.getElementById('primary-download');
+  var note = document.getElementById('detected-note');
+  var pick = { mac: 'mac', win: 'win', linux: 'deb64' }[os];
+  var asset = ASSETS.filter(function (a) { return a.key === pick; })[0];
+
+  if (primary && asset) {
+    primary.href = BASE + asset.file;
+    primary.textContent = 'Download for ' + asset.os.replace(/ \(.*\)/, '');
+    if (note) {
+      note.innerHTML = 'Detected <strong>' + asset.os + '</strong>. ' +
+        'Not right? <a href="#download">See all platforms</a>.';
+    }
+  } else if (note) {
+    note.innerHTML = 'Choose your platform below.';
+  }
+
+  // Copy button for the (hidden) shared-license section.
+  var copyBtn = document.getElementById('copy-key');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', function () {
+      var key = (document.getElementById('license-key') || {}).textContent || '';
+      var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500); };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(key).then(done, done);
+      } else { done(); }
+    });
+  }
+})();
+</script>
+</body>
+</html>

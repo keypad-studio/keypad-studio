@@ -1,0 +1,26 @@
+# OS/editor metadata
+.DS_Store
+._*
+.idea/
+*.iml
+
+# Local env files
+.env
+.env.*
+!.env.example
+
+# Build outputs
+.gradle/
+build/
+out/
+
+# Logs
+*.log
+
+# Local release artifacts
+*.dmg
+*.exe
+*.msi
+*.deb
+*.rpm
+*.AppImage

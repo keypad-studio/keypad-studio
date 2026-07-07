@@ -1,0 +1,41 @@
+<svg width="1024" height="1024" viewBox="0 0 1024 1024" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Keypad Studio — dark "studio" badge with a "K" on the glowing centre key. K drawn as paths (no font dependency). -->
+  <defs>
+    <linearGradient id="bg" x1="128" y1="96" x2="928" y2="960" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#1B1E25"/>
+      <stop offset="1" stop-color="#0E0F13"/>
+    </linearGradient>
+    <linearGradient id="key" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#2B2F38"/>
+      <stop offset="1" stop-color="#22252D"/>
+    </linearGradient>
+    <linearGradient id="accentKey" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#5B79FF"/>
+      <stop offset="1" stop-color="#4256D6"/>
+    </linearGradient>
+    <filter id="glow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="52"/>
+    </filter>
+  </defs>
+  <rect x="64" y="64" width="896" height="896" rx="196" fill="url(#bg)"/>
+  <rect x="65.5" y="65.5" width="893" height="893" rx="194.5" stroke="#3A3E46" stroke-width="3"/>
+  <!-- accent glow behind centre key -->
+  <rect x="412" y="412" width="200" height="200" rx="44" fill="#4F6BED" opacity="0.5" filter="url(#glow)"/>
+  <!-- keys -->
+  <rect x="156" y="156" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <rect x="412" y="156" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <rect x="156" y="412" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <rect x="412" y="412" width="200" height="200" rx="44" fill="url(#accentKey)"/>
+  <rect x="668" y="412" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <rect x="156" y="668" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <rect x="412" y="668" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <rect x="668" y="668" width="200" height="200" rx="44" fill="url(#key)" stroke="#3A3E46" stroke-width="3"/>
+  <!-- geometric K on the centre key -->
+  <line x1="472" y1="446" x2="472" y2="578" stroke="#F5F7FF" stroke-width="34" stroke-linecap="round"/>
+  <line x1="472" y1="526" x2="562" y2="446" stroke="#F5F7FF" stroke-width="34" stroke-linecap="round"/>
+  <line x1="493" y1="513" x2="566" y2="578" stroke="#F5F7FF" stroke-width="34" stroke-linecap="round"/>
+  <!-- knob (top-right cell) -->
+  <circle cx="768" cy="256" r="104" fill="#E8EAEF"/>
+  <circle cx="768" cy="256" r="64" fill="#17191F"/>
+  <line x1="768" y1="256" x2="806" y2="218" stroke="#5B79FF" stroke-width="22" stroke-linecap="round"/>
+</svg>
