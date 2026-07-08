@@ -11,6 +11,10 @@ RGB — all from a clean desktop UI, on macOS, Windows, and Linux.
 [![Downloads](https://img.shields.io/github/downloads/keypad-studio/keypad-studio/total?label=downloads)](https://github.com/keypad-studio/keypad-studio/releases)
 [![Platforms](https://img.shields.io/badge/platforms-macOS%20%7C%20Windows%20%7C%20Linux-lightgrey)](#download)
 
+<br />
+
+<img src="docs/assets/screenshot-1.png" alt="Keypad Studio main window — preset list, key grid, rotary knobs, and preset properties" width="860" />
+
 </div>
 
 ---

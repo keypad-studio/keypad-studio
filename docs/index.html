@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Keypad Studio — cross-platform macro keypad configurator</title>
 <meta name="description" content="Keypad Studio — remap keys, record macros, drive layers, switch per-app presets, and control RGB on MINI KeyBoard macro keypads. macOS, Windows, and Linux." />
-<link rel="icon" href="keypad-studio-logo.svg" type="image/svg+xml" />
+<link rel="icon" href="assets/keypad-studio-logo.svg" type="image/svg+xml" />
 <style>
   :root {
     --bg: #f7f8fa;
@@ -62,9 +62,40 @@
   .cta small { display: block; color: var(--muted); font-size: .85rem; margin-top: 4px; }
   #detected-note { color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
 
-  /* Screenshot */
-  .shot { margin: 44px auto 0; max-width: 900px; }
-  .shot img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); display: block; }
+  /* Screenshot carousel */
+  .carousel { margin: 44px auto 0; max-width: 900px; }
+  .carousel:focus { outline: none; }
+  .carousel:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius); }
+  .carousel-viewport {
+    position: relative; overflow: hidden;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    box-shadow: var(--shadow); background: var(--panel);
+  }
+  .carousel-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+  .slide { flex: 0 0 100%; min-width: 0; }
+  .slide img { width: 100%; height: auto; display: block; }
+  .carousel-btn {
+    position: absolute; top: 50%; z-index: 2; transform: translateY(-50%);
+    width: 44px; height: 44px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(255,255,255,.92); color: #12141a; border: 1px solid rgba(16,24,40,.12);
+    font-size: 1.6rem; line-height: 1; padding-bottom: 3px; cursor: pointer;
+    box-shadow: var(--shadow); transition: background .15s ease, transform .06s ease;
+  }
+  .carousel-btn:hover { background: #fff; }
+  .carousel-btn:active { transform: translateY(-50%) scale(.94); }
+  .carousel-btn.prev { left: 12px; }
+  .carousel-btn.next { right: 12px; }
+  .carousel-caption { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
+  .carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
+  .carousel-dots button {
+    width: 9px; height: 9px; padding: 0; border: none; border-radius: 50%;
+    background: var(--border); cursor: pointer; transition: background .15s ease, transform .15s ease;
+  }
+  .carousel-dots button:hover { background: var(--muted); }
+  .carousel-dots button[aria-current="true"] { background: var(--accent); transform: scale(1.3); }
+  @media (max-width: 520px) { .carousel-btn { width: 38px; height: 38px; font-size: 1.3rem; } }
+  @media (prefers-reduced-motion: reduce) { .carousel-track { transition: none; } }
 
   /* Sections */
   section.section { padding: 56px 0; }
@@ -106,7 +137,7 @@
 <body>
 
 <header class="hero">
-  <img class="logo" src="keypad-studio-logo.svg" alt="Keypad Studio logo" />
+  <img class="logo" src="assets/keypad-studio-logo.svg" alt="Keypad Studio logo" />
   <h1>Keypad Studio</h1>
   <p class="tagline">A modern, cross-platform configurator for “MINI KeyBoard” macro keypads.
     Remap keys, record macros, drive layers, switch presets per app, and light up the RGB.</p>
@@ -119,8 +150,28 @@
 </header>
 
 <div class="wrap">
-  <div class="shot">
-    <img src="screenshot.png" alt="Keypad Studio main window — preset list, key grid, and preset properties" loading="lazy" />
+  <div class="carousel" id="carousel" role="group" tabindex="0"
+       aria-roledescription="carousel" aria-label="Keypad Studio screenshots">
+    <div class="carousel-viewport">
+      <div class="carousel-track" id="carousel-track">
+        <div class="slide" data-caption="Manual preset — remap every key and rotary knob">
+          <img src="assets/screenshot-1.png" alt="Keypad Studio — Manual preset with editing shortcuts mapped across the key grid" />
+        </div>
+        <div class="slide" data-caption="AI preset — one-tap shortcuts for ChatGPT, Claude and more">
+          <img src="assets/screenshot-2.png" alt="Keypad Studio — AI preset with chat and prompt shortcuts" loading="lazy" />
+        </div>
+        <div class="slide" data-caption="Browsers preset — tabs, navigation, and zoom on the knobs">
+          <img src="assets/screenshot-3.png" alt="Keypad Studio — Browsers preset with tab and navigation controls" loading="lazy" />
+        </div>
+        <div class="slide" data-caption="Home Assistant preset — trigger smart-home scenes and lights">
+          <img src="assets/screenshot-4.png" alt="Keypad Studio — Home Assistant preset controlling smart-home scenes" loading="lazy" />
+        </div>
+      </div>
+      <button class="carousel-btn prev" id="carousel-prev" type="button" aria-label="Previous screenshot">&#8249;</button>
+      <button class="carousel-btn next" id="carousel-next" type="button" aria-label="Next screenshot">&#8250;</button>
+    </div>
+    <div class="carousel-caption" id="carousel-caption" aria-live="polite"></div>
+    <div class="carousel-dots" id="carousel-dots" role="tablist" aria-label="Choose screenshot"></div>
   </div>
 </div>
 
@@ -281,6 +332,66 @@
         navigator.clipboard.writeText(key).then(done, done);
       } else { done(); }
     });
+  }
+
+  // Screenshot carousel.
+  var track = document.getElementById('carousel-track');
+  if (track && track.children.length) {
+    var slides = track.children;
+    var count = slides.length;
+    var dotsHost = document.getElementById('carousel-dots');
+    var caption = document.getElementById('carousel-caption');
+    var carousel = document.getElementById('carousel');
+    var index = 0, timer = null;
+    var AUTO_MS = 5000;
+    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    var dots = [];
+    for (var i = 0; i < count; i++) {
+      (function (n) {
+        var d = document.createElement('button');
+        d.type = 'button';
+        d.setAttribute('role', 'tab');
+        d.setAttribute('aria-label', 'Show screenshot ' + (n + 1));
+        d.addEventListener('click', function () { go(n); restart(); });
+        dotsHost.appendChild(d);
+        dots.push(d);
+      })(i);
+    }
+
+    function update() {
+      track.style.transform = 'translateX(' + (-index * 100) + '%)';
+      for (var j = 0; j < count; j++) {
+        dots[j].setAttribute('aria-current', j === index ? 'true' : 'false');
+        dots[j].setAttribute('aria-selected', j === index ? 'true' : 'false');
+      }
+      if (caption) caption.textContent = slides[index].getAttribute('data-caption') || '';
+    }
+    function go(n) { index = (n + count) % count; update(); }
+    function next() { go(index + 1); }
+    function prev() { go(index - 1); }
+    function stop() { if (timer) { clearInterval(timer); timer = null; } }
+    function start() { if (!reduce && count > 1 && !timer) { timer = setInterval(next, AUTO_MS); } }
+    function restart() { stop(); start(); }
+
+    var prevBtn = document.getElementById('carousel-prev');
+    var nextBtn = document.getElementById('carousel-next');
+    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restart(); });
+    if (nextBtn) nextBtn.addEventListener('click', function () { next(); restart(); });
+
+    if (carousel) {
+      carousel.addEventListener('mouseenter', stop);
+      carousel.addEventListener('mouseleave', start);
+      carousel.addEventListener('focusin', stop);
+      carousel.addEventListener('focusout', start);
+      carousel.addEventListener('keydown', function (e) {
+        if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); restart(); }
+        else if (e.key === 'ArrowRight') { e.preventDefault(); next(); restart(); }
+      });
+    }
+
+    update();
+    start();
   }
 })();
 </script>
