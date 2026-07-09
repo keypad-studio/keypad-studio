@@ -1,0 +1,3473 @@
+[
+    {
+        "name": "Manual",
+        "layers": {
+            "1": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "VOLUME_DOWN"
+                        ],
+                        "title": "Vol -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "MUTE"
+                        ],
+                        "title": "Mute"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "VOLUME_UP"
+                        ],
+                        "title": "Vol +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "PREVIOUS_TRACK"
+                        ],
+                        "title": "Prev"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "PLAY_PAUSE"
+                        ],
+                        "title": "Play"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "NEXT_TRACK"
+                        ],
+                        "title": "Next"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "KEY_C"
+                        ],
+                        "title": "Copy"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "KEY_V"
+                        ],
+                        "title": "Paste"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "KEY_X"
+                        ],
+                        "title": "Cut"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "KEY_A"
+                        ],
+                        "title": "All"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Find"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_N"
+                        ],
+                        "title": "New"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "KEY_Z"
+                        ],
+                        "title": "Undo"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_Z"
+                        ],
+                        "title": "Redo"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "KEY_S"
+                        ],
+                        "title": "Save"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "CTRL",
+                            "SUPER",
+                            "KEY_Q"
+                        ],
+                        "title": "Lock"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_5"
+                        ],
+                        "title": "Shot"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "SPACE"
+                        ],
+                        "title": "Spotlight"
+                    }
+                ],
+                "keyColor": {
+                    "value": 5,
+                    "name": "Blue"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "2": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "SUPER",
+                            "MINUS"
+                        ],
+                        "title": "Zoom -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_0"
+                        ],
+                        "title": "100%"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "EQUALS"
+                        ],
+                        "title": "Zoom +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SUPER",
+                            "LEFT_BRACKET"
+                        ],
+                        "title": "Back"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_R"
+                        ],
+                        "title": "Refresh"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_BRACKET"
+                        ],
+                        "title": "Forward"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "TAB"
+                        ],
+                        "title": "Prev App"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "TAB"
+                        ],
+                        "title": "Next App"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "KEY_W"
+                        ],
+                        "title": "Close"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "KEY_Q"
+                        ],
+                        "title": "Quit"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "LEFT_BRACKET"
+                        ],
+                        "title": "Back"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_BRACKET"
+                        ],
+                        "title": "Forward"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "TAB"
+                        ],
+                        "title": "Tab -"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "CTRL",
+                            "TAB"
+                        ],
+                        "title": "Tab +"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "KEY_T"
+                        ],
+                        "title": "New Tab"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "KEY_W"
+                        ],
+                        "title": "Close Tab"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_T"
+                        ],
+                        "title": "Reopen"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "COMMA"
+                        ],
+                        "title": "Prefs"
+                    }
+                ],
+                "keyColor": {
+                    "value": 4,
+                    "name": "Cyan"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "3": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Left"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "ENTER"
+                        ],
+                        "title": "Enter"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Right"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Down"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "ESC"
+                        ],
+                        "title": "Esc"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "UP_ARROW"
+                        ],
+                        "title": "Up"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "HOME"
+                        ],
+                        "title": "Home"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "END"
+                        ],
+                        "title": "End"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "PAGE_UP"
+                        ],
+                        "title": "Pg Up"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "PAGE_DOWN"
+                        ],
+                        "title": "Pg Down"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "DELETE"
+                        ],
+                        "title": "Delete"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "BACKSPACE"
+                        ],
+                        "title": "Bksp"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "ALT",
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Word -"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "ALT",
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Word +"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Line -"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Line +"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "UP_ARROW"
+                        ],
+                        "title": "Top"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Bottom"
+                    }
+                ],
+                "keyColor": {
+                    "value": 3,
+                    "name": "Green"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            }
+        },
+        "autoSwitch": false,
+        "layout": {
+            "rows": 3,
+            "cols": 4,
+            "knobs": 2,
+            "numbering": "BOTTOM_LEFT_COLUMNS"
+        }
+    },
+    {
+        "name": "AI",
+        "layers": {
+            "1": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "SUPER",
+                            "MINUS"
+                        ],
+                        "title": "Zoom -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_0"
+                        ],
+                        "title": "Reset"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "EQUALS"
+                        ],
+                        "title": "Zoom +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "ALT",
+                            "UP_ARROW"
+                        ],
+                        "title": "Thread -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "ENTER"
+                        ],
+                        "title": "Send"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "ALT",
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Thread +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "KEY_N"
+                        ],
+                        "title": "New Chat"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Search"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "ENTER"
+                        ],
+                        "title": "Send"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "ESC"
+                        ],
+                        "title": "Stop"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "KEY_C"
+                        ],
+                        "title": "Copy"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_V"
+                        ],
+                        "title": "Paste"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "KEY_A"
+                        ],
+                        "title": "All"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Line Start"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Line End"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_V"
+                        ],
+                        "title": "Voice"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "COMMA"
+                        ],
+                        "title": "Settings"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "KEY_R"
+                        ],
+                        "title": "Reload"
+                    }
+                ],
+                "keyColor": {
+                    "value": 6,
+                    "name": "Purple"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "2": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "SUPER",
+                            "KEY_Z"
+                        ],
+                        "title": "Undo"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_Z"
+                        ],
+                        "title": "Redo"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "KEY_S"
+                        ],
+                        "title": "Save"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SUPER",
+                            "LEFT_BRACKET"
+                        ],
+                        "title": "Prev"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Find"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_BRACKET"
+                        ],
+                        "title": "Next"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "KEY_L"
+                        ],
+                        "title": "Prompt"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "KEY_O"
+                        ],
+                        "title": "Attach"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SHIFT",
+                            "ENTER"
+                        ],
+                        "title": "New Line"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "ESC"
+                        ],
+                        "title": "Cancel"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "KEY_B"
+                        ],
+                        "title": "Bold"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_I"
+                        ],
+                        "title": "Italic"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "KEY_E"
+                        ],
+                        "title": "Code"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_C"
+                        ],
+                        "title": "Copy All"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "BACKSPACE"
+                        ],
+                        "title": "Clear"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "KEY_H"
+                        ],
+                        "title": "History"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "KEY_B"
+                        ],
+                        "title": "Sidebar"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "SLASH"
+                        ],
+                        "title": "Help"
+                    }
+                ],
+                "keyColor": {
+                    "value": 5,
+                    "name": "Blue"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "3": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "VOLUME_DOWN"
+                        ],
+                        "title": "Vol -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "MUTE"
+                        ],
+                        "title": "Mute"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "VOLUME_UP"
+                        ],
+                        "title": "Vol +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "TAB"
+                        ],
+                        "title": "Tab -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "TAB"
+                        ],
+                        "title": "Tab"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "CTRL",
+                            "TAB"
+                        ],
+                        "title": "Tab +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_P"
+                        ],
+                        "title": "Cmd"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "KEY_P"
+                        ],
+                        "title": "Files"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_O"
+                        ],
+                        "title": "Symbol"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "CTRL",
+                            "GRAVE_ACCENT"
+                        ],
+                        "title": "Terminal"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "SLASH"
+                        ],
+                        "title": "Comment"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SHIFT",
+                            "ALT",
+                            "KEY_F"
+                        ],
+                        "title": "Format"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "CTRL",
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Left"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "CTRL",
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Right"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "CTRL",
+                            "UP_ARROW"
+                        ],
+                        "title": "Up"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "CTRL",
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Down"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "CTRL",
+                            "KEY_R"
+                        ],
+                        "title": "Run"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "CTRL",
+                            "KEY_C"
+                        ],
+                        "title": "Stop"
+                    }
+                ],
+                "keyColor": {
+                    "value": 4,
+                    "name": "Cyan"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            }
+        },
+        "apps": [
+            "ChatGPT.app",
+            "Claude.app",
+            "Perplexity.app",
+            "Cursor.app",
+            "LM Studio.app"
+        ],
+        "layout": {
+            "rows": 3,
+            "cols": 4,
+            "knobs": 2,
+            "numbering": "BOTTOM_LEFT_COLUMNS"
+        }
+    },
+    {
+        "name": "Browsers",
+        "layers": {
+            "1": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "SUPER",
+                            "MINUS"
+                        ],
+                        "title": "Zoom -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_0"
+                        ],
+                        "title": "100%"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "EQUALS"
+                        ],
+                        "title": "Zoom +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SUPER",
+                            "LEFT_BRACKET"
+                        ],
+                        "title": "Back"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_R"
+                        ],
+                        "title": "Reload"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_BRACKET"
+                        ],
+                        "title": "Forward"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "LEFT_BRACKET"
+                        ],
+                        "title": "Back"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "RIGHT_BRACKET"
+                        ],
+                        "title": "Forward"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "KEY_R"
+                        ],
+                        "title": "Reload"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "KEY_L"
+                        ],
+                        "title": "Address"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "TAB"
+                        ],
+                        "title": "Tab -"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "CTRL",
+                            "TAB"
+                        ],
+                        "title": "Tab +"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "KEY_T"
+                        ],
+                        "title": "New Tab"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "KEY_W"
+                        ],
+                        "title": "Close Tab"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_T"
+                        ],
+                        "title": "Reopen"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "KEY_D"
+                        ],
+                        "title": "Bookmark"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Find"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "KEY_L"
+                        ],
+                        "title": "Downloads"
+                    }
+                ],
+                "keyColor": {
+                    "value": 4,
+                    "name": "Cyan"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "2": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "PREVIOUS_TRACK"
+                        ],
+                        "title": "Prev"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "PLAY_PAUSE"
+                        ],
+                        "title": "Play"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "NEXT_TRACK"
+                        ],
+                        "title": "Next"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "VOLUME_DOWN"
+                        ],
+                        "title": "Vol -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "MUTE"
+                        ],
+                        "title": "Mute"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "VOLUME_UP"
+                        ],
+                        "title": "Vol +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "KEY_I"
+                        ],
+                        "title": "DevTools"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_C"
+                        ],
+                        "title": "Inspect"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "KEY_J"
+                        ],
+                        "title": "Console"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "KEY_U"
+                        ],
+                        "title": "Source"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_R"
+                        ],
+                        "title": "Hard Reload"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "BACKSPACE"
+                        ],
+                        "title": "Cache"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_N"
+                        ],
+                        "title": "Private"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "KEY_Y"
+                        ],
+                        "title": "History"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "KEY_P"
+                        ],
+                        "title": "Print"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_R"
+                        ],
+                        "title": "Reader"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "CTRL",
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Full"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "COMMA"
+                        ],
+                        "title": "Prefs"
+                    }
+                ],
+                "keyColor": {
+                    "value": 1,
+                    "name": "Orange"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "3": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "PAGE_UP"
+                        ],
+                        "title": "Scroll -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "UP_ARROW"
+                        ],
+                        "title": "Top"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "PAGE_DOWN"
+                        ],
+                        "title": "Scroll +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "ALT",
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Word -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SPACE"
+                        ],
+                        "title": "Space"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "ALT",
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Word +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "HOME"
+                        ],
+                        "title": "Home"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "END"
+                        ],
+                        "title": "End"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "PAGE_UP"
+                        ],
+                        "title": "Pg Up"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "PAGE_DOWN"
+                        ],
+                        "title": "Pg Down"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "KEY_C"
+                        ],
+                        "title": "Copy"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_V"
+                        ],
+                        "title": "Paste"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "KEY_O"
+                        ],
+                        "title": "Open"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "KEY_S"
+                        ],
+                        "title": "Save Page"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_S"
+                        ],
+                        "title": "Share"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "KEY_1"
+                        ],
+                        "title": "Tab 1"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "KEY_2"
+                        ],
+                        "title": "Tab 2"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "KEY_3"
+                        ],
+                        "title": "Tab 3"
+                    }
+                ],
+                "keyColor": {
+                    "value": 3,
+                    "name": "Green"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            }
+        },
+        "apps": [
+            "Safari.app",
+            "Google Chrome.app",
+            "Firefox.app",
+            "Microsoft Edge.app",
+            "Brave Browser.app",
+            "Arc.app"
+        ],
+        "layout": {
+            "rows": 3,
+            "cols": 4,
+            "knobs": 2,
+            "numbering": "BOTTOM_LEFT_COLUMNS"
+        }
+    },
+    {
+        "name": "Editors",
+        "layers": {
+            "1": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "TAB"
+                        ],
+                        "title": "Tab -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_S"
+                        ],
+                        "title": "Save"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "CTRL",
+                            "TAB"
+                        ],
+                        "title": "Tab +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SUPER",
+                            "KEY_Z"
+                        ],
+                        "title": "Undo"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_P"
+                        ],
+                        "title": "Cmd"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_Z"
+                        ],
+                        "title": "Redo"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_P"
+                        ],
+                        "title": "Command"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "KEY_P"
+                        ],
+                        "title": "File"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Find"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "KEY_F"
+                        ],
+                        "title": "Replace"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "KEY_S"
+                        ],
+                        "title": "Save"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "KEY_S"
+                        ],
+                        "title": "Save All"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "KEY_Z"
+                        ],
+                        "title": "Undo"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_Z"
+                        ],
+                        "title": "Redo"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "SLASH"
+                        ],
+                        "title": "Comment"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SHIFT",
+                            "ALT",
+                            "KEY_F"
+                        ],
+                        "title": "Format"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "CTRL",
+                            "GRAVE_ACCENT"
+                        ],
+                        "title": "Terminal"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_E"
+                        ],
+                        "title": "Explorer"
+                    }
+                ],
+                "keyColor": {
+                    "value": 5,
+                    "name": "Blue"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "2": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "SHIFT",
+                            "F12"
+                        ],
+                        "title": "Prev Ref"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "F12"
+                        ],
+                        "title": "Def"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "ALT",
+                            "F12"
+                        ],
+                        "title": "Next Ref"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "F8"
+                        ],
+                        "title": "Problem -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SUPER",
+                            "PERIOD"
+                        ],
+                        "title": "Fix"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SHIFT",
+                            "F8"
+                        ],
+                        "title": "Problem +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_O"
+                        ],
+                        "title": "Symbol"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "KEY_T"
+                        ],
+                        "title": "Workspace"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "F12"
+                        ],
+                        "title": "Definition"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "ALT",
+                            "F12"
+                        ],
+                        "title": "Peek"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SHIFT",
+                            "F12"
+                        ],
+                        "title": "Refs"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "F2"
+                        ],
+                        "title": "Rename"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "PERIOD"
+                        ],
+                        "title": "Fix"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_M"
+                        ],
+                        "title": "Problems"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "LEFT_BRACKET"
+                        ],
+                        "title": "Fold"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "ALT",
+                            "RIGHT_BRACKET"
+                        ],
+                        "title": "Unfold"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "ALT",
+                            "UP_ARROW"
+                        ],
+                        "title": "Line Up"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "ALT",
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Line Down"
+                    }
+                ],
+                "keyColor": {
+                    "value": 6,
+                    "name": "Purple"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "3": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "GRAVE_ACCENT"
+                        ],
+                        "title": "Branch -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "KEY_G"
+                        ],
+                        "title": "Git"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "CTRL",
+                            "GRAVE_ACCENT"
+                        ],
+                        "title": "Branch +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SHIFT",
+                            "F11"
+                        ],
+                        "title": "Debug -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "F5"
+                        ],
+                        "title": "Run"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "F10"
+                        ],
+                        "title": "Debug +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "KEY_G"
+                        ],
+                        "title": "Git"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "ENTER"
+                        ],
+                        "title": "Commit"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_P"
+                        ],
+                        "title": "Pull"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_P"
+                        ],
+                        "title": "Push"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "F5"
+                        ],
+                        "title": "Run"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SHIFT",
+                            "F5"
+                        ],
+                        "title": "Stop"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "F10"
+                        ],
+                        "title": "Step Over"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "F11"
+                        ],
+                        "title": "Step In"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "KEY_J"
+                        ],
+                        "title": "Panel"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "BACKSLASH"
+                        ],
+                        "title": "Split"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "KEY_1"
+                        ],
+                        "title": "Left Pane"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "KEY_2"
+                        ],
+                        "title": "Right Pane"
+                    }
+                ],
+                "keyColor": {
+                    "value": 3,
+                    "name": "Green"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            }
+        },
+        "apps": [
+            "Visual Studio Code.app",
+            "Cursor.app",
+            "IntelliJ IDEA.app",
+            "Zed.app",
+            "Sublime Text.app",
+            "Nova.app"
+        ],
+        "layout": {
+            "rows": 3,
+            "cols": 4,
+            "knobs": 2,
+            "numbering": "BOTTOM_LEFT_COLUMNS"
+        }
+    },
+    {
+        "name": "Home Assistant",
+        "layers": {
+            "1": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "F13"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.living_room",
+                                    "brightness_step_pct": -10
+                                }
+                            },
+                            "displayLabel": "Dim living room"
+                        },
+                        "title": "Dim Living"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "F14"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.living_room"
+                            },
+                            "displayLabel": "Toggle living room"
+                        },
+                        "title": "Living"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "F15"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.living_room",
+                                    "brightness_step_pct": 10
+                                }
+                            },
+                            "displayLabel": "Brighten living room"
+                        },
+                        "title": "Bright Living"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "F16"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.office",
+                                    "brightness_step_pct": -10
+                                }
+                            },
+                            "displayLabel": "Dim office"
+                        },
+                        "title": "Dim Office"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "F17"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.office"
+                            },
+                            "displayLabel": "Toggle office"
+                        },
+                        "title": "Office"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "F18"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.office",
+                                    "brightness_step_pct": 10
+                                }
+                            },
+                            "displayLabel": "Brighten office"
+                        },
+                        "title": "Bright Office"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "F19"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.morning"
+                            },
+                            "displayLabel": "Morning scene"
+                        },
+                        "title": "Morning"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "F20"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.work"
+                            },
+                            "displayLabel": "Work scene"
+                        },
+                        "title": "Work"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "F21"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.movie"
+                            },
+                            "displayLabel": "Movie scene"
+                        },
+                        "title": "Movie"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "F22"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.night"
+                            },
+                            "displayLabel": "Night scene"
+                        },
+                        "title": "Night"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "F23"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.kitchen"
+                            },
+                            "displayLabel": "Toggle kitchen"
+                        },
+                        "title": "Kitchen"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "F24"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.dining_room"
+                            },
+                            "displayLabel": "Toggle dining room"
+                        },
+                        "title": "Dining"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SHIFT",
+                            "F13"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.hallway"
+                            },
+                            "displayLabel": "Toggle hallway"
+                        },
+                        "title": "Hall"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SHIFT",
+                            "F14"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.desk"
+                            },
+                            "displayLabel": "Toggle desk"
+                        },
+                        "title": "Desk"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SHIFT",
+                            "F15"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.bedroom"
+                            },
+                            "displayLabel": "Toggle bedroom"
+                        },
+                        "title": "Bedroom"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SHIFT",
+                            "F16"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.away"
+                            },
+                            "displayLabel": "Away scene"
+                        },
+                        "title": "Away"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SHIFT",
+                            "F17"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.home"
+                            },
+                            "displayLabel": "Home scene"
+                        },
+                        "title": "Home"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SHIFT",
+                            "F18"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_off",
+                                "data": {
+                                    "entity_id": "all"
+                                }
+                            },
+                            "displayLabel": "All lights off"
+                        },
+                        "title": "All Off"
+                    }
+                ],
+                "keyColor": {
+                    "value": 2,
+                    "name": "Yellow"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "2": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "SHIFT",
+                            "F19"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "media_volume_down",
+                            "params": {
+                                "player": "media_player.living_room"
+                            },
+                            "displayLabel": "Living room volume down"
+                        },
+                        "title": "Vol -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SHIFT",
+                            "F20"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "media_play_pause",
+                            "params": {
+                                "player": "media_player.living_room"
+                            },
+                            "displayLabel": "Living room play or pause"
+                        },
+                        "title": "Play"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "SHIFT",
+                            "F21"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "media_volume_up",
+                            "params": {
+                                "player": "media_player.living_room"
+                            },
+                            "displayLabel": "Living room volume up"
+                        },
+                        "title": "Vol +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SHIFT",
+                            "F22"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "climate",
+                                "service": "set_temperature",
+                                "data": {
+                                    "entity_id": "climate.home",
+                                    "temperature": 19
+                                }
+                            },
+                            "displayLabel": "Set temperature 19"
+                        },
+                        "title": "Temp -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SHIFT",
+                            "F23"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "climate",
+                                "service": "toggle",
+                                "data": {
+                                    "entity_id": "climate.home"
+                                }
+                            },
+                            "displayLabel": "Toggle climate"
+                        },
+                        "title": "Climate"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SHIFT",
+                            "F24"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "climate",
+                                "service": "set_temperature",
+                                "data": {
+                                    "entity_id": "climate.home",
+                                    "temperature": 21
+                                }
+                            },
+                            "displayLabel": "Set temperature 21"
+                        },
+                        "title": "Temp +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "CTRL",
+                            "F13"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "switch.tv"
+                            },
+                            "displayLabel": "Toggle TV"
+                        },
+                        "title": "TV"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "CTRL",
+                            "F14"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "switch.amplifier"
+                            },
+                            "displayLabel": "Toggle amplifier"
+                        },
+                        "title": "Audio"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "CTRL",
+                            "F15"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "media_next",
+                            "params": {
+                                "player": "media_player.living_room"
+                            },
+                            "displayLabel": "Next track"
+                        },
+                        "title": "Next"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "CTRL",
+                            "F16"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "vacuum",
+                                "service": "start",
+                                "data": {
+                                    "entity_id": "vacuum.downstairs"
+                                }
+                            },
+                            "displayLabel": "Start vacuum"
+                        },
+                        "title": "Vacuum"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "CTRL",
+                            "F17"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "vacuum",
+                                "service": "pause",
+                                "data": {
+                                    "entity_id": "vacuum.downstairs"
+                                }
+                            },
+                            "displayLabel": "Pause vacuum"
+                        },
+                        "title": "Pause Vac"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "CTRL",
+                            "F18"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "vacuum",
+                                "service": "return_to_base",
+                                "data": {
+                                    "entity_id": "vacuum.downstairs"
+                                }
+                            },
+                            "displayLabel": "Dock vacuum"
+                        },
+                        "title": "Dock"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "CTRL",
+                            "F19"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "fan.office"
+                            },
+                            "displayLabel": "Toggle office fan"
+                        },
+                        "title": "Fan"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "CTRL",
+                            "F20"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "switch.humidifier"
+                            },
+                            "displayLabel": "Toggle humidifier"
+                        },
+                        "title": "Humid"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "CTRL",
+                            "F21"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "turn_on",
+                            "params": {
+                                "entity": "switch.coffee_machine"
+                            },
+                            "displayLabel": "Start coffee"
+                        },
+                        "title": "Coffee"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "CTRL",
+                            "F22"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "lock.front_door"
+                            },
+                            "displayLabel": "Toggle front door lock"
+                        },
+                        "title": "Door"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "CTRL",
+                            "F23"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "cover.garage_door"
+                            },
+                            "displayLabel": "Toggle garage"
+                        },
+                        "title": "Garage"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "CTRL",
+                            "F24"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "alarm_control_panel",
+                                "service": "alarm_arm_away",
+                                "data": {
+                                    "entity_id": "alarm_control_panel.home"
+                                }
+                            },
+                            "displayLabel": "Arm alarm away"
+                        },
+                        "title": "Alarm"
+                    }
+                ],
+                "keyColor": {
+                    "value": 1,
+                    "name": "Orange"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "3": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "ALT",
+                            "F13"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "cover",
+                                "service": "close_cover",
+                                "data": {
+                                    "entity_id": "cover.living_room"
+                                }
+                            },
+                            "displayLabel": "Close living room blinds"
+                        },
+                        "title": "Blind -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "ALT",
+                            "F14"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "cover.living_room"
+                            },
+                            "displayLabel": "Toggle living room blinds"
+                        },
+                        "title": "Blinds"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "ALT",
+                            "F15"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "cover",
+                                "service": "open_cover",
+                                "data": {
+                                    "entity_id": "cover.living_room"
+                                }
+                            },
+                            "displayLabel": "Open living room blinds"
+                        },
+                        "title": "Blind +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "ALT",
+                            "F16"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.living_room",
+                                    "hs_color": [
+                                        220,
+                                        70
+                                    ]
+                                }
+                            },
+                            "displayLabel": "Living room cool color"
+                        },
+                        "title": "Color -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "ALT",
+                            "F17"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.living_room",
+                                    "color_temp_kelvin": 3200
+                                }
+                            },
+                            "displayLabel": "Living room warm white"
+                        },
+                        "title": "White"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "ALT",
+                            "F18"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "light.living_room",
+                                    "hs_color": [
+                                        35,
+                                        80
+                                    ]
+                                }
+                            },
+                            "displayLabel": "Living room warm color"
+                        },
+                        "title": "Color +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "ALT",
+                            "F19"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.guests"
+                            },
+                            "displayLabel": "Guests scene"
+                        },
+                        "title": "Guest"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "ALT",
+                            "F20"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.dinner"
+                            },
+                            "displayLabel": "Dinner scene"
+                        },
+                        "title": "Dinner"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "ALT",
+                            "F21"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.focus"
+                            },
+                            "displayLabel": "Focus scene"
+                        },
+                        "title": "Focus"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "ALT",
+                            "F22"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "activate_scene",
+                            "params": {
+                                "scene": "scene.sleep"
+                            },
+                            "displayLabel": "Sleep scene"
+                        },
+                        "title": "Sleep"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "ALT",
+                            "F23"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.porch"
+                            },
+                            "displayLabel": "Toggle porch"
+                        },
+                        "title": "Porch"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "ALT",
+                            "F24"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "light.garden"
+                            },
+                            "displayLabel": "Toggle garden"
+                        },
+                        "title": "Garden"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "F13"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "switch.desk_outlet"
+                            },
+                            "displayLabel": "Toggle desk outlet"
+                        },
+                        "title": "Outlet"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "F14"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "switch.heater"
+                            },
+                            "displayLabel": "Toggle heater"
+                        },
+                        "title": "Heater"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "F15"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "toggle",
+                            "params": {
+                                "entity": "switch.air_conditioner"
+                            },
+                            "displayLabel": "Toggle air conditioner"
+                        },
+                        "title": "AC"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "F16"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "notify",
+                                "service": "mobile_app",
+                                "data": {
+                                    "message": "Keypad button pressed"
+                                }
+                            },
+                            "displayLabel": "Send mobile notification"
+                        },
+                        "title": "Notify"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "F17"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "script",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "script.goodnight"
+                                }
+                            },
+                            "displayLabel": "Run goodnight script"
+                        },
+                        "title": "Script"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "F18"
+                        ],
+                        "action": {
+                            "type": "plugin",
+                            "pluginId": "nl.redlabs.home-assistant",
+                            "actionId": "call_service",
+                            "params": {
+                                "domain": "light",
+                                "service": "turn_on",
+                                "data": {
+                                    "entity_id": "all",
+                                    "brightness_pct": 100
+                                }
+                            },
+                            "displayLabel": "All lights bright"
+                        },
+                        "title": "Panic"
+                    }
+                ],
+                "keyColor": {
+                    "value": 0,
+                    "name": "Red"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            }
+        },
+        "autoSwitch": false,
+        "layout": {
+            "rows": 3,
+            "cols": 4,
+            "knobs": 2,
+            "numbering": "BOTTOM_LEFT_COLUMNS"
+        }
+    },
+    {
+        "name": "Meetings",
+        "layers": {
+            "1": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "VOLUME_DOWN"
+                        ],
+                        "title": "Vol -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "MUTE"
+                        ],
+                        "title": "Mute"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "VOLUME_UP"
+                        ],
+                        "title": "Vol +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "PREVIOUS_TRACK"
+                        ],
+                        "title": "Prev"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "PLAY_PAUSE"
+                        ],
+                        "title": "Play"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "NEXT_TRACK"
+                        ],
+                        "title": "Next"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_A"
+                        ],
+                        "title": "Mic"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_V"
+                        ],
+                        "title": "Video"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_S"
+                        ],
+                        "title": "Share"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_H"
+                        ],
+                        "title": "Chat"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "ALT",
+                            "KEY_Y"
+                        ],
+                        "title": "Raise"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_W"
+                        ],
+                        "title": "Leave"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_R"
+                        ],
+                        "title": "Record"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "SUPER",
+                            "KEY_I"
+                        ],
+                        "title": "Invite"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "SUPER",
+                            "KEY_U"
+                        ],
+                        "title": "Participants"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "CTRL",
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Full"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "KEY_L"
+                        ],
+                        "title": "Copy Link"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "COMMA"
+                        ],
+                        "title": "Prefs"
+                    }
+                ],
+                "keyColor": {
+                    "value": 3,
+                    "name": "Green"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "2": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "ALT",
+                            "UP_ARROW"
+                        ],
+                        "title": "Msg -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "ENTER"
+                        ],
+                        "title": "Send"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "ALT",
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Msg +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "CTRL",
+                            "SHIFT",
+                            "TAB"
+                        ],
+                        "title": "Tab -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "TAB"
+                        ],
+                        "title": "Tab"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "CTRL",
+                            "TAB"
+                        ],
+                        "title": "Tab +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "KEY_R"
+                        ],
+                        "title": "Reply"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "BACKSLASH"
+                        ],
+                        "title": "React"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "SHIFT",
+                            "KEY_2"
+                        ],
+                        "title": "Mention"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "SUPER",
+                            "KEY_F"
+                        ],
+                        "title": "Search"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_T"
+                        ],
+                        "title": "Threads"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_K"
+                        ],
+                        "title": "Channels"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_K"
+                        ],
+                        "title": "DMs"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "ALT",
+                            "SHIFT",
+                            "UP_ARROW"
+                        ],
+                        "title": "Unread"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "ALT",
+                            "SHIFT",
+                            "DOWN_ARROW"
+                        ],
+                        "title": "Next Unread"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "SUPER",
+                            "KEY_N"
+                        ],
+                        "title": "New Msg"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "UP_ARROW"
+                        ],
+                        "title": "Edit"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "ESC"
+                        ],
+                        "title": "Esc"
+                    }
+                ],
+                "keyColor": {
+                    "value": 4,
+                    "name": "Cyan"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            },
+            "3": {
+                "keys": [
+                    {
+                        "key": "KNOB1_LEFT",
+                        "value": [
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Slide -"
+                    },
+                    {
+                        "key": "KNOB1_CENTER",
+                        "value": [
+                            "SUPER",
+                            "ENTER"
+                        ],
+                        "title": "Play"
+                    },
+                    {
+                        "key": "KNOB1_RIGHT",
+                        "value": [
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Slide +"
+                    },
+                    {
+                        "key": "KNOB2_LEFT",
+                        "value": [
+                            "SUPER",
+                            "MINUS"
+                        ],
+                        "title": "Zoom -"
+                    },
+                    {
+                        "key": "KNOB2_CENTER",
+                        "value": [
+                            "SUPER",
+                            "KEY_0"
+                        ],
+                        "title": "100%"
+                    },
+                    {
+                        "key": "KNOB2_RIGHT",
+                        "value": [
+                            "SUPER",
+                            "EQUALS"
+                        ],
+                        "title": "Zoom +"
+                    },
+                    {
+                        "key": "KEY1",
+                        "value": [
+                            "SUPER",
+                            "ENTER"
+                        ],
+                        "title": "Start"
+                    },
+                    {
+                        "key": "KEY2",
+                        "value": [
+                            "RIGHT_ARROW"
+                        ],
+                        "title": "Next"
+                    },
+                    {
+                        "key": "KEY3",
+                        "value": [
+                            "LEFT_ARROW"
+                        ],
+                        "title": "Prev"
+                    },
+                    {
+                        "key": "KEY4",
+                        "value": [
+                            "KEY_B"
+                        ],
+                        "title": "Black"
+                    },
+                    {
+                        "key": "KEY5",
+                        "value": [
+                            "KEY_W"
+                        ],
+                        "title": "White"
+                    },
+                    {
+                        "key": "KEY6",
+                        "value": [
+                            "SUPER",
+                            "KEY_L"
+                        ],
+                        "title": "Pointer"
+                    },
+                    {
+                        "key": "KEY7",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_N"
+                        ],
+                        "title": "Notes"
+                    },
+                    {
+                        "key": "KEY8",
+                        "value": [
+                            "KEY_T"
+                        ],
+                        "title": "Timer"
+                    },
+                    {
+                        "key": "KEY9",
+                        "value": [
+                            "KEY_B"
+                        ],
+                        "title": "Pause"
+                    },
+                    {
+                        "key": "KEY10",
+                        "value": [
+                            "ESC"
+                        ],
+                        "title": "End"
+                    },
+                    {
+                        "key": "KEY11",
+                        "value": [
+                            "SUPER",
+                            "SHIFT",
+                            "KEY_5"
+                        ],
+                        "title": "Shot"
+                    },
+                    {
+                        "key": "KEY12",
+                        "value": [
+                            "SUPER",
+                            "KEY_C"
+                        ],
+                        "title": "Copy"
+                    }
+                ],
+                "keyColor": {
+                    "value": 1,
+                    "name": "Orange"
+                },
+                "ledMode": {
+                    "value": 4,
+                    "name": "Pressed key"
+                }
+            }
+        },
+        "apps": [
+            "zoom.us.app",
+            "Microsoft Teams.app",
+            "Slack.app",
+            "Discord.app"
+        ],
+        "layout": {
+            "rows": 3,
+            "cols": 4,
+            "knobs": 2,
+            "numbering": "BOTTOM_LEFT_COLUMNS"
+        }
+    }
+]

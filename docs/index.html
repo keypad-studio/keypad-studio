@@ -1,147 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Keypad Studio — cross-platform macro keypad configurator</title>
-<meta name="description" content="Keypad Studio — remap keys, record macros, drive layers, switch per-app presets, control RGB, and extend with plugins on MINI KeyBoard macro keypads. macOS, Windows, and Linux." />
-<link rel="icon" href="assets/keypad-studio-logo.svg" type="image/svg+xml" />
-<style>
-  :root {
-    --bg: #f7f8fa;
-    --panel: #ffffff;
-    --border: #e4e7ec;
-    --fg: #12141a;
-    --muted: #5b6472;
-    --accent: #4285f4;
-    --accent-fg: #ffffff;
-    --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
-    --radius: 14px;
-  }
-  @media (prefers-color-scheme: dark) {
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keypad Studio — cross-platform macro keypad configurator</title>
+  <meta name="description" content="Keypad Studio — remap keys, record macros, drive layers, switch per-app presets, control RGB, and extend with plugins on MINI KeyBoard macro keypads. macOS, Windows, and Linux." />
+  <link rel="icon" href="assets/keypad-studio-logo.svg" type="image/svg+xml" />
+  <style>
     :root {
-      --bg: #0d0f14;
-      --panel: #161922;
-      --border: #262b36;
-      --fg: #eef1f6;
-      --muted: #9aa4b2;
-      --accent: #5b9bff;
-      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+      --bg: #f7f8fa;
+      --panel: #ffffff;
+      --border: #e4e7ec;
+      --fg: #12141a;
+      --muted: #5b6472;
+      --accent: #4285f4;
+      --accent-fg: #ffffff;
+      --shadow: 0 1px 2px rgba(16,24,40,.06), 0 8px 24px rgba(16,24,40,.06);
+      --radius: 14px;
     }
-  }
-  * { box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    margin: 0;
-    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--fg);
-    background: var(--bg);
-    -webkit-font-smoothing: antialiased;
-  }
-  a { color: var(--accent); text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0d0f14;
+        --panel: #161922;
+        --border: #262b36;
+        --fg: #eef1f6;
+        --muted: #9aa4b2;
+        --accent: #5b9bff;
+        --shadow: 0 1px 2px rgba(0,0,0,.4), 0 10px 30px rgba(0,0,0,.35);
+      }
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--fg);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .wrap { max-width: 960px; margin: 0 auto; padding: 0 20px; }
 
-  /* Hero */
-  header.hero { text-align: center; padding: 72px 20px 40px; }
-  .hero img.logo { width: 96px; height: 96px; filter: drop-shadow(0 6px 16px rgba(0,0,0,.28)); }
-  .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 18px 0 6px; letter-spacing: -.02em; }
-  .hero p.tagline { color: var(--muted); font-size: 1.15rem; max-width: 640px; margin: 0 auto 28px; }
+    /* Hero */
+    header.hero { text-align: center; padding: 72px 20px 40px; }
+    .hero img.logo { width: 96px; height: 96px; filter: drop-shadow(0 6px 16px rgba(0,0,0,.28)); }
+    .hero h1 { font-size: clamp(2rem, 5vw, 3rem); margin: 18px 0 6px; letter-spacing: -.02em; }
+    .hero p.tagline { color: var(--muted); font-size: 1.15rem; max-width: 640px; margin: 0 auto 28px; }
 
-  .cta { display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; }
-  .btn {
-    display: inline-flex; align-items: center; gap: 8px;
-    padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: 1rem;
-    border: 1px solid transparent; cursor: pointer; transition: transform .04s ease, background .15s ease;
-  }
-  .btn:active { transform: translateY(1px); }
-  .btn.primary { background: var(--accent); color: var(--accent-fg); }
-  .btn.primary:hover { text-decoration: none; filter: brightness(1.05); }
-  .btn.ghost { background: transparent; color: var(--fg); border-color: var(--border); }
-  .btn.ghost:hover { text-decoration: none; background: var(--panel); }
-  .cta small { display: block; color: var(--muted); font-size: .85rem; margin-top: 4px; }
-  #detected-note { color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
+    .cta { display: flex; gap: 12px; justify-content: center; align-items: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 12px 22px; border-radius: 10px; font-weight: 600; font-size: 1rem;
+      border: 1px solid transparent; cursor: pointer; transition: transform .04s ease, background .15s ease;
+    }
+    .btn:active { transform: translateY(1px); }
+    .btn.primary { background: var(--accent); color: var(--accent-fg); }
+    .btn.primary:hover { text-decoration: none; filter: brightness(1.05); }
+    .btn.ghost { background: transparent; color: var(--fg); border-color: var(--border); }
+    .btn.ghost:hover { text-decoration: none; background: var(--panel); }
+    .cta small { display: block; color: var(--muted); font-size: .85rem; margin-top: 4px; }
+    #detected-note { color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
 
-  /* Screenshot carousel */
-  .carousel { margin: 44px auto 0; max-width: 900px; }
-  .carousel:focus { outline: none; }
-  .carousel:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius); }
-  .carousel-viewport {
-    position: relative; overflow: hidden;
-    border: 1px solid var(--border); border-radius: var(--radius);
-    box-shadow: var(--shadow); background: var(--panel);
-  }
-  .carousel-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
-  .slide { flex: 0 0 100%; min-width: 0; }
-  .slide img { width: 100%; height: auto; display: block; }
-  .carousel-btn {
-    position: absolute; top: 50%; z-index: 2; transform: translateY(-50%);
-    width: 44px; height: 44px; border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    background: rgba(255,255,255,.92); color: #12141a; border: 1px solid rgba(16,24,40,.12);
-    font-size: 1.6rem; line-height: 1; padding-bottom: 3px; cursor: pointer;
-    box-shadow: var(--shadow); transition: background .15s ease, transform .06s ease;
-  }
-  .carousel-btn:hover { background: #fff; }
-  .carousel-btn:active { transform: translateY(-50%) scale(.94); }
-  .carousel-btn.prev { left: 12px; }
-  .carousel-btn.next { right: 12px; }
-  .carousel-caption { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
-  .carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
-  .carousel-dots button {
-    width: 9px; height: 9px; padding: 0; border: none; border-radius: 50%;
-    background: var(--border); cursor: pointer; transition: background .15s ease, transform .15s ease;
-  }
-  .carousel-dots button:hover { background: var(--muted); }
-  .carousel-dots button[aria-current="true"] { background: var(--accent); transform: scale(1.3); }
-  @media (max-width: 520px) { .carousel-btn { width: 38px; height: 38px; font-size: 1.3rem; } }
-  @media (prefers-reduced-motion: reduce) { .carousel-track { transition: none; } }
+    /* Screenshot carousel */
+    .carousel { margin: 44px auto 0; max-width: 900px; }
+    .carousel:focus { outline: none; }
+    .carousel:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; border-radius: var(--radius); }
+    .carousel-viewport {
+      position: relative; overflow: hidden;
+      border: 1px solid var(--border); border-radius: var(--radius);
+      box-shadow: var(--shadow); background: var(--panel);
+    }
+    .carousel-track { display: flex; transition: transform .45s cubic-bezier(.4,0,.2,1); will-change: transform; }
+    .slide { flex: 0 0 100%; min-width: 0; }
+    .slide img { width: 100%; height: auto; display: block; }
+    .carousel-btn {
+      position: absolute; top: 50%; z-index: 2; transform: translateY(-50%);
+      width: 44px; height: 44px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(255,255,255,.92); color: #12141a; border: 1px solid rgba(16,24,40,.12);
+      font-size: 1.6rem; line-height: 1; padding-bottom: 3px; cursor: pointer;
+      box-shadow: var(--shadow); transition: background .15s ease, transform .06s ease;
+    }
+    .carousel-btn:hover { background: #fff; }
+    .carousel-btn:active { transform: translateY(-50%) scale(.94); }
+    .carousel-btn.prev { left: 12px; }
+    .carousel-btn.next { right: 12px; }
+    .carousel-caption { text-align: center; color: var(--muted); font-size: .9rem; margin-top: 14px; min-height: 1.2em; }
+    .carousel-dots { display: flex; gap: 8px; justify-content: center; margin-top: 10px; }
+    .carousel-dots button {
+      width: 9px; height: 9px; padding: 0; border: none; border-radius: 50%;
+      background: var(--border); cursor: pointer; transition: background .15s ease, transform .15s ease;
+    }
+    .carousel-dots button:hover { background: var(--muted); }
+    .carousel-dots button[aria-current="true"] { background: var(--accent); transform: scale(1.3); }
+    @media (max-width: 520px) { .carousel-btn { width: 38px; height: 38px; font-size: 1.3rem; } }
+    @media (prefers-reduced-motion: reduce) { .carousel-track { transition: none; } }
 
-  /* Sections */
-  section.section { padding: 56px 0; }
-  section.section h2 { font-size: 1.5rem; margin: 0 0 24px; letter-spacing: -.01em; }
-  .card {
-    background: var(--panel); border: 1px solid var(--border);
-    border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px;
-  }
+    /* Sections */
+    section.section { padding: 56px 0; }
+    section.section h2 { font-size: 1.5rem; margin: 0 0 24px; letter-spacing: -.01em; }
+    .card {
+      background: var(--panel); border: 1px solid var(--border);
+      border-radius: var(--radius); box-shadow: var(--shadow); padding: 24px;
+    }
 
-  /* Download grid */
-  #download { padding-top: 0; }
-  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
-  .dl {
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
-  }
-  .dl .meta { display: flex; flex-direction: column; }
-  .dl .meta .os { font-weight: 600; }
-  .dl .meta .file { color: var(--muted); font-size: .8rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
-  .dl a.get { white-space: nowrap; font-weight: 600; }
+    /* Example presets */
+    .preset-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 18px;
+    }
+    .preset-card p { margin-bottom: 0; }
+    .preset-card .btn { flex: none; }
 
-  /* Features — grouped cards */
-  .feature-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
-  .fgroup { padding: 22px 24px; }
-  .fgroup h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 15px; font-size: 1.05rem; letter-spacing: -.01em; }
-  .fgroup h3 svg { width: 20px; height: 20px; color: var(--accent); flex: none; }
-  .fgroup ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
-  .fgroup li { position: relative; padding-left: 18px; color: var(--muted); font-size: .93rem; line-height: 1.5; }
-  .fgroup li::before {
-    content: ""; position: absolute; left: 0; top: .58em;
-    width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: .55;
-  }
-  .fgroup li strong { color: var(--fg); font-weight: 600; }
+    @media (max-width: 640px) {
+      .preset-card {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
 
-  /* Shared license (hidden by default) */
-  .keybox { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 6px; }
-  .keybox code {
-    flex: 1 1 260px; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border);
-    border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95rem;
-    overflow: auto; white-space: nowrap;
-  }
-  .fine { color: var(--muted); font-size: .85rem; }
+    /* Download grid */
+    #download { padding-top: 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px; }
+    .dl {
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+      background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 14px 16px;
+    }
+    .dl .meta { display: flex; flex-direction: column; }
+    .dl .meta .os { font-weight: 600; }
+    .dl .meta .file { color: var(--muted); font-size: .8rem; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; }
+    .dl a.get { white-space: nowrap; font-weight: 600; }
 
-  footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--muted); text-align: center; font-size: .9rem; }
-  footer a { color: var(--muted); }
-</style>
+    /* Features — grouped cards */
+    .feature-groups { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px; }
+    .fgroup { padding: 22px 24px; }
+    .fgroup h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 15px; font-size: 1.05rem; letter-spacing: -.01em; }
+    .fgroup h3 svg { width: 20px; height: 20px; color: var(--accent); flex: none; }
+    .fgroup ul { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 11px; }
+    .fgroup li { position: relative; padding-left: 18px; color: var(--muted); font-size: .93rem; line-height: 1.5; }
+    .fgroup li::before {
+      content: ""; position: absolute; left: 0; top: .58em;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--accent); opacity: .55;
+    }
+    .fgroup li strong { color: var(--fg); font-weight: 600; }
+
+    /* Shared license (hidden by default) */
+    .keybox { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin: 14px 0 6px; }
+    .keybox code {
+      flex: 1 1 260px; padding: 12px 14px; background: var(--bg); border: 1px solid var(--border);
+      border-radius: 10px; font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .95rem;
+      overflow: auto; white-space: nowrap;
+    }
+    .fine { color: var(--muted); font-size: .85rem; }
+
+    footer { border-top: 1px solid var(--border); padding: 32px 0 48px; color: var(--muted); text-align: center; font-size: .9rem; }
+    footer a { color: var(--muted); }
+  </style>
 </head>
 <body>
 
@@ -284,6 +301,29 @@
       setup (a <code>udev</code> rule and an X11 session) — the in-app first-run checklist walks you through it.</p>
   </section>
 
+  <!-- Example presets -->
+  <section id="example-presets" class="section">
+    <h2>Try example presets</h2>
+    <div class="card preset-card">
+      <div>
+        <p style="margin-top:0">
+          Download a ready-made presets example JSON and import it into
+          <strong>Keypad Studio → Presets → Import</strong>.
+        </p>
+        <p class="fine">
+          Includes sample layouts for AI shortcuts, browser controls, Home Assistant actions, and common editing macros.
+        </p>
+      </div>
+      <a
+              class="btn primary"
+              href="assets/presets-example.json"
+              download="keypad-studio-example-presets.json"
+      >
+        Download presets JSON
+      </a>
+    </div>
+  </section>
+
   <!-- Downloads -->
   <section id="download" class="section">
     <h2>Download</h2>
@@ -315,154 +355,154 @@
 </footer>
 
 <script>
-(function () {
-  var contactHost = document.getElementById('support-email');
-  if (contactHost) {
-    var contact = [
-      115, 116, 117, 100, 105, 111, 107, 101, 121, 112, 97, 100,
-      64,
-      103, 109, 97, 105, 108,
-      46,
-      99, 111, 109
-    ].map(function (code) { return String.fromCharCode(code); }).join('');
-    contactHost.addEventListener('click', function (event) {
-      event.preventDefault();
-      window.location.href = ['mai', 'lto:'].join('') + contact;
-    });
-  }
-
-  var REPO = 'keypad-studio/keypad-studio';
-  var BASE = 'https://github.com/' + REPO + '/releases/latest/download/';
-
-  // Ordered list of every published asset.
-  var ASSETS = [
-    { key: 'mac',   os: 'macOS (Apple Silicon)',           file: 'KeypadStudio-macos-arm64.dmg' },
-    { key: 'win',   os: 'Windows (x64)',                   file: 'KeypadStudio-windows-x64.exe' },
-    { key: 'deb64', os: 'Debian / Ubuntu (x64)',           file: 'KeypadStudio-linux-x64.deb' },
-    { key: 'debA',  os: 'Debian / Pi OS 64-bit (arm64)',   file: 'KeypadStudio-linux-arm64.deb' },
-    { key: 'app64', os: 'Linux AppImage (x64)',            file: 'KeypadStudio-linux-x64-appimage.AppImage' },
-    { key: 'appA',  os: 'Linux AppImage (arm64)',          file: 'KeypadStudio-linux-arm64-appimage.AppImage' }
-  ];
-
-  // Build the download grid.
-  var grid = document.getElementById('download-grid');
-  if (grid) {
-    ASSETS.forEach(function (a) {
-      var row = document.createElement('div');
-      row.className = 'dl';
-      row.innerHTML =
-        '<span class="meta"><span class="os"></span><span class="file"></span></span>' +
-        '<a class="get" rel="nofollow"></a>';
-      row.querySelector('.os').textContent = a.os;
-      row.querySelector('.file').textContent = a.file;
-      var link = row.querySelector('a.get');
-      link.href = BASE + a.file;
-      link.textContent = 'Download';
-      grid.appendChild(row);
-    });
-  }
-
-  // Detect the visitor's OS for the primary hero button. Browsers don't expose CPU arch
-  // reliably, so we default macOS -> arm64 (the only mac build) and Linux -> .deb x64.
-  function detect() {
-    var ua = navigator.userAgent || '';
-    var pf = navigator.platform || '';
-    if (/Android/.test(ua)) return null;
-    if (/Mac|iPhone|iPad|iPod/.test(ua) || /Mac/.test(pf)) return 'mac';
-    if (/Win/.test(ua) || /Win/.test(pf)) return 'win';
-    if (/Linux|X11|CrOS/.test(ua)) return 'linux';
-    return null;
-  }
-
-  var os = detect();
-  var primary = document.getElementById('primary-download');
-  var note = document.getElementById('detected-note');
-  var pick = { mac: 'mac', win: 'win', linux: 'deb64' }[os];
-  var asset = ASSETS.filter(function (a) { return a.key === pick; })[0];
-
-  if (primary && asset) {
-    primary.href = BASE + asset.file;
-    primary.textContent = 'Download for ' + asset.os.replace(/ \(.*\)/, '');
-    if (note) {
-      note.innerHTML = 'Detected <strong>' + asset.os + '</strong>. ' +
-        'Not right? <a href="#download">See all platforms</a>.';
-    }
-  } else if (note) {
-    note.innerHTML = 'Choose your platform below.';
-  }
-
-  // Copy button for the (hidden) shared-license section.
-  var copyBtn = document.getElementById('copy-key');
-  if (copyBtn) {
-    copyBtn.addEventListener('click', function () {
-      var key = (document.getElementById('license-key') || {}).textContent || '';
-      var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500); };
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        navigator.clipboard.writeText(key).then(done, done);
-      } else { done(); }
-    });
-  }
-
-  // Screenshot carousel.
-  var track = document.getElementById('carousel-track');
-  if (track && track.children.length) {
-    var slides = track.children;
-    var count = slides.length;
-    var dotsHost = document.getElementById('carousel-dots');
-    var caption = document.getElementById('carousel-caption');
-    var carousel = document.getElementById('carousel');
-    var index = 0, timer = null;
-    var AUTO_MS = 5000;
-    var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-
-    var dots = [];
-    for (var i = 0; i < count; i++) {
-      (function (n) {
-        var d = document.createElement('button');
-        d.type = 'button';
-        d.setAttribute('role', 'tab');
-        d.setAttribute('aria-label', 'Show screenshot ' + (n + 1));
-        d.addEventListener('click', function () { go(n); restart(); });
-        dotsHost.appendChild(d);
-        dots.push(d);
-      })(i);
-    }
-
-    function update() {
-      track.style.transform = 'translateX(' + (-index * 100) + '%)';
-      for (var j = 0; j < count; j++) {
-        dots[j].setAttribute('aria-current', j === index ? 'true' : 'false');
-        dots[j].setAttribute('aria-selected', j === index ? 'true' : 'false');
-      }
-      if (caption) caption.textContent = slides[index].getAttribute('data-caption') || '';
-    }
-    function go(n) { index = (n + count) % count; update(); }
-    function next() { go(index + 1); }
-    function prev() { go(index - 1); }
-    function stop() { if (timer) { clearInterval(timer); timer = null; } }
-    function start() { if (!reduce && count > 1 && !timer) { timer = setInterval(next, AUTO_MS); } }
-    function restart() { stop(); start(); }
-
-    var prevBtn = document.getElementById('carousel-prev');
-    var nextBtn = document.getElementById('carousel-next');
-    if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restart(); });
-    if (nextBtn) nextBtn.addEventListener('click', function () { next(); restart(); });
-
-    if (carousel) {
-      carousel.addEventListener('mouseenter', stop);
-      carousel.addEventListener('mouseleave', start);
-      carousel.addEventListener('focusin', stop);
-      carousel.addEventListener('focusout', start);
-      carousel.addEventListener('keydown', function (e) {
-        if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); restart(); }
-        else if (e.key === 'ArrowRight') { e.preventDefault(); next(); restart(); }
+  (function () {
+    var contactHost = document.getElementById('support-email');
+    if (contactHost) {
+      var contact = [
+        115, 116, 117, 100, 105, 111, 107, 101, 121, 112, 97, 100,
+        64,
+        103, 109, 97, 105, 108,
+        46,
+        99, 111, 109
+      ].map(function (code) { return String.fromCharCode(code); }).join('');
+      contactHost.addEventListener('click', function (event) {
+        event.preventDefault();
+        window.location.href = ['mai', 'lto:'].join('') + contact;
       });
     }
 
-    update();
-    start();
-  }
-})();
+    var REPO = 'keypad-studio/keypad-studio';
+    var BASE = 'https://github.com/' + REPO + '/releases/latest/download/';
+
+    // Ordered list of every published asset.
+    var ASSETS = [
+      { key: 'mac',   os: 'macOS (Apple Silicon)',           file: 'KeypadStudio-macos-arm64.dmg' },
+      { key: 'win',   os: 'Windows (x64)',                   file: 'KeypadStudio-windows-x64.exe' },
+      { key: 'deb64', os: 'Debian / Ubuntu (x64)',           file: 'KeypadStudio-linux-x64.deb' },
+      { key: 'debA',  os: 'Debian / Pi OS 64-bit (arm64)',   file: 'KeypadStudio-linux-arm64.deb' },
+      { key: 'app64', os: 'Linux AppImage (x64)',            file: 'KeypadStudio-linux-x64-appimage.AppImage' },
+      { key: 'appA',  os: 'Linux AppImage (arm64)',          file: 'KeypadStudio-linux-arm64-appimage.AppImage' }
+    ];
+
+    // Build the download grid.
+    var grid = document.getElementById('download-grid');
+    if (grid) {
+      ASSETS.forEach(function (a) {
+        var row = document.createElement('div');
+        row.className = 'dl';
+        row.innerHTML =
+                '<span class="meta"><span class="os"></span><span class="file"></span></span>' +
+                '<a class="get" rel="nofollow"></a>';
+        row.querySelector('.os').textContent = a.os;
+        row.querySelector('.file').textContent = a.file;
+        var link = row.querySelector('a.get');
+        link.href = BASE + a.file;
+        link.textContent = 'Download';
+        grid.appendChild(row);
+      });
+    }
+
+    // Detect the visitor's OS for the primary hero button. Browsers don't expose CPU arch
+    // reliably, so we default macOS -> arm64 (the only mac build) and Linux -> .deb x64.
+    function detect() {
+      var ua = navigator.userAgent || '';
+      var pf = navigator.platform || '';
+      if (/Android/.test(ua)) return null;
+      if (/Mac|iPhone|iPad|iPod/.test(ua) || /Mac/.test(pf)) return 'mac';
+      if (/Win/.test(ua) || /Win/.test(pf)) return 'win';
+      if (/Linux|X11|CrOS/.test(ua)) return 'linux';
+      return null;
+    }
+
+    var os = detect();
+    var primary = document.getElementById('primary-download');
+    var note = document.getElementById('detected-note');
+    var pick = { mac: 'mac', win: 'win', linux: 'deb64' }[os];
+    var asset = ASSETS.filter(function (a) { return a.key === pick; })[0];
+
+    if (primary && asset) {
+      primary.href = BASE + asset.file;
+      primary.textContent = 'Download for ' + asset.os.replace(/ \(.*\)/, '');
+      if (note) {
+        note.innerHTML = 'Detected <strong>' + asset.os + '</strong>. ' +
+                'Not right? <a href="#download">See all platforms</a>.';
+      }
+    } else if (note) {
+      note.innerHTML = 'Choose your platform below.';
+    }
+
+    // Copy button for the (hidden) shared-license section.
+    var copyBtn = document.getElementById('copy-key');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        var key = (document.getElementById('license-key') || {}).textContent || '';
+        var done = function () { copyBtn.textContent = 'Copied'; setTimeout(function () { copyBtn.textContent = 'Copy'; }, 1500); };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(key).then(done, done);
+        } else { done(); }
+      });
+    }
+
+    // Screenshot carousel.
+    var track = document.getElementById('carousel-track');
+    if (track && track.children.length) {
+      var slides = track.children;
+      var count = slides.length;
+      var dotsHost = document.getElementById('carousel-dots');
+      var caption = document.getElementById('carousel-caption');
+      var carousel = document.getElementById('carousel');
+      var index = 0, timer = null;
+      var AUTO_MS = 5000;
+      var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      var dots = [];
+      for (var i = 0; i < count; i++) {
+        (function (n) {
+          var d = document.createElement('button');
+          d.type = 'button';
+          d.setAttribute('role', 'tab');
+          d.setAttribute('aria-label', 'Show screenshot ' + (n + 1));
+          d.addEventListener('click', function () { go(n); restart(); });
+          dotsHost.appendChild(d);
+          dots.push(d);
+        })(i);
+      }
+
+      function update() {
+        track.style.transform = 'translateX(' + (-index * 100) + '%)';
+        for (var j = 0; j < count; j++) {
+          dots[j].setAttribute('aria-current', j === index ? 'true' : 'false');
+          dots[j].setAttribute('aria-selected', j === index ? 'true' : 'false');
+        }
+        if (caption) caption.textContent = slides[index].getAttribute('data-caption') || '';
+      }
+      function go(n) { index = (n + count) % count; update(); }
+      function next() { go(index + 1); }
+      function prev() { go(index - 1); }
+      function stop() { if (timer) { clearInterval(timer); timer = null; } }
+      function start() { if (!reduce && count > 1 && !timer) { timer = setInterval(next, AUTO_MS); } }
+      function restart() { stop(); start(); }
+
+      var prevBtn = document.getElementById('carousel-prev');
+      var nextBtn = document.getElementById('carousel-next');
+      if (prevBtn) prevBtn.addEventListener('click', function () { prev(); restart(); });
+      if (nextBtn) nextBtn.addEventListener('click', function () { next(); restart(); });
+
+      if (carousel) {
+        carousel.addEventListener('mouseenter', stop);
+        carousel.addEventListener('mouseleave', start);
+        carousel.addEventListener('focusin', stop);
+        carousel.addEventListener('focusout', start);
+        carousel.addEventListener('keydown', function (e) {
+          if (e.key === 'ArrowLeft') { e.preventDefault(); prev(); restart(); }
+          else if (e.key === 'ArrowRight') { e.preventDefault(); next(); restart(); }
+        });
+      }
+
+      update();
+      start();
+    }
+  })();
 </script>
 </body>
 </html>
