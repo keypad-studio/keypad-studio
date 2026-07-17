@@ -38,9 +38,7 @@ Older versions and full release notes live on the
 
 ## Installing
 
-- **macOS** — open the `.dmg` and drag Keypad Studio to Applications. Builds are code-signed and
-  notarized when signing is configured; otherwise the first launch needs a right-click → **Open**
-  to bypass Gatekeeper on the unsigned app.
+- **macOS** — open the `.dmg` and drag Keypad Studio to Applications.
 - **Windows** — run the `.exe` installer. It installs per-user (no admin required).
 - **Linux (Debian family / Raspberry Pi OS 64-bit)** —
   ```bash
